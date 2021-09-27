@@ -1,0 +1,1 @@
+"os: Visual Studio 2015\nenvironment:\n  matrix:\n    - nodejs_version: \"10\"\n    - nodejs_version: \"12\"\n\ninstall:\n  - ps: Install-Product node $env:nodejs_version\n  - npm install\n\ntest_script:\n  - node --version\n  - npm --version\n  - npm run test\n\nbuild: off\n"
